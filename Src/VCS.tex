@@ -48,9 +48,9 @@
  \framesubtitle{Exemple}
 \begin{figure}
  \centering
- \includegraphics[width=10mm]{./Diagramme1.png}
+ \includegraphics[width=60mm]{./Img/RevertFich.png}
  % Diagramme1.png: 0x0 pixel, 0dpi, 0.00x0.00 cm, bb=
- \caption{Différentes version d'un fichier}
+ \caption{Récupération de la  version 1.0 d'un fichier}
 \end{figure}
 \end{frame}
 
@@ -60,18 +60,30 @@
 \begin{frame}
 \frametitle{Les types de gestionnaires de version}
 \begin{itemize}
- \item Les gestionnaires centralisés : CVS, SVN
- \item Les gestionnaires décentralisés : GNU Arch, Mercurial, Git
+ \item<1,2> Les gestionnaires centralisés \only<2>{: CVS, SVN}
+ \item<3-> Les gestionnaires décentralisés \only<4->{: GNU Arch, Mercurial, Git}
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Version}
+\begin{block}{Définition}
 La version d'un fichier est l'avancement des modification d'un fichier qui a été validé par l'utilisateur.
+\end{block}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Branche}
+\begin{block}{Définition}
 Une branche est une version d'un projet que l'on souhaite continuer de manière indépendante 
+\end{block}
+\begin{figure}
+ \centering
+ \includegraphics[width=35mm]{./Img/DefBranches.png}
+ % DefBranches.png: 0x0 pixel, -2147483648dpi, nanxnan cm, bb=
+ \caption{Un début de projet}
+\end{figure}
+
 \end{frame}
