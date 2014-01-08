@@ -1,5 +1,29 @@
 \subsection{Description}
 \subsection{Cycle}
+	\begin{frame}[fragile]{Variables globales}
+		\begin{block}<1->{La branche de développement par défaut}
+			\verb'master'
+		\end{block}
+		\begin{block}<2->{Le dépot par défaut}
+			\verb'origin'
+		\end{block}
+		\begin{block}<3->{La branche courante}
+			\verb'HEAD'
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}[fragile]{Notation}
+		\begin{block}<1->{Réprésentation de l'id d'un commit, d'une branche ou d'un tag}
+			\verb'$id'
+		\end{block}
+		\begin{block}<2->{Un fichier}
+			\verb'$file'
+		\end{block}
+		\begin{block}<3->{Une branche}
+			\verb'$branch'
+		\end{block}
+	\end{frame}
+
 	\subsubsection{Create}
 		\begin{frame}[fragile]
 			\frametitle{Create}
@@ -20,32 +44,94 @@
 			\end{block}
 
 		\end{frame}
+		
 	\subsubsection{Browse}
-		\begin{frame}
+	
+		\begin{frame}[fragile]
 			\frametitle{Browse}
+			
+			\begin{block}<2>{Connaitre les fichiers modifiés dans le dossier}
+				\verb'git status'
+			\end{block}
+			
+			\begin{block}<3>{Connaitre les modifications sur les fichiers suivis}
+				\verb'git diff'
+			\end{block}
+			\begin{block}<4>{Connaitre l'historique des modifications}
+				\verb'git log'
+			\end{block}
+			\begin{block}<5>{Connaitre le détail d'un commit}
+				\verb'git show $id'
+			\end{block}
+			\begin{block}<6>{Connaitre toutes les branches locales}
+				\verb'git branch'
+			\end{block}
 		\end{frame}
-	\subsubsection{Change}
-		\begin{frame}
-			\frametitle{Change}
-		\end{frame}
+		
 	\subsubsection{Revert}
-		\begin{frame}
+		\begin{frame}[fragile]
 			\frametitle{Revert}
+			\begin{block}<2>{Repartir au dernier commit}
+				\verb'git revert HEAD'
+			\end{block}
+			\begin{block}<3>{Repartir à un commit donné}
+				\verb'git revert $id'
+			\end{block}
+			\begin{alertblock}<4->{Retourner à un commit donné}
+				\verb'git reset --hard'\\
+				\only<5>{Un 'revert' peut être annulé. Un 'reset' NON!}
+			\end{alertblock}
+			
+
+
+
 		\end{frame}
 	\subsubsection{Update}
-		\begin{frame}
+		\begin{frame}[fragile]
 			\frametitle{Update}
+			\begin{block}<2>{Connaitre les dernières modifications par rapport à origin}
+				\verb'git fetch'
+			\end{block}
+			\begin{block}<3>{Récupérer les dernières modifications par rapport à origin}
+				\verb'git pull'
+			\end{block}
 		\end{frame}
 	\subsubsection{Branch}
-		\begin{frame}
+		\begin{frame}[fragile]
 			\frametitle{Branch}
+			\begin{block}<2>{Passer à une branche donnée}
+				\verb'git checkout $id'
+			\end{block}
+			\begin{block}<3>{Créer une nouvelle branche à partir de l'actuelle}
+				\verb'git branch $branch'
+			\end{block}
+			\begin{block}<4>{Créer une nouvelle branche à partir d'une branche donnée(\$other) et passer sur la nouvelle}
+				\verb'git checkout -b $new_branch $other'
+			\end{block}
+			\begin{alertblock}<5>{Supprimer une branche}
+				\verb'git branch -d $branch'
+			\end{alertblock}
+
+			
 		\end{frame}
 	\subsubsection{Commit}
-		\begin{frame}
+		\begin{frame}[fragile]
 			\frametitle{Commit}
+			\begin{block}<2->{Valider des changements}
+				\verb'git commit -m "message"'\\
+				L'option \verb'-m' permet d'ajouter un message au commit				
+			\end{block}
+			\begin{alertblock}<3>{IMPORTANT}
+				Les changements que l'on valide sont ceux que l'on a ajouté grâce à \verb'git add $file'\\
+				On peut ajouter dans un commit tous les fichiers suivis avec l'option \verb'-a'
+			\end{alertblock}
+			
 		\end{frame}
 	\subsubsection{Publish}
-		\begin{frame}
+		\begin{frame}[fragile]
 			\frametitle{Publish}
+			\begin{block}<2->{Envoyer les changements sur le serveur}
+				\verb'git push origin $branch'\\	
+			\end{block}
 		\end{frame}
 
