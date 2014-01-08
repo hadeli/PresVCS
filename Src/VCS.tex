@@ -1,3 +1,6 @@
+\begin{frame}
+	\sectionpage
+\end{frame}
 \subsection{Concept}
 	\begin{frame}
 		\frametitle{Une problématique}
@@ -52,10 +55,69 @@
 \subsection{Notions}
 	\begin{frame}
 		\frametitle{Les types de gestionnaires de version}
-		\begin{itemize}
-			\item<1,2> Les gestionnaires centralisés \only<2>{: CVS, SVN}
-			\item<3-> Les gestionnaires décentralisés \only<4->{: GNU Arch, Mercurial, Git}
-		\end{itemize}
+		\begin{block}<1->{Les gestionnaires centralisés}
+
+			Un seul dépot de référence
+
+			\only<2>{
+				\begin{block}{Avantages}
+					Gestion de versions facilité
+				\end{block}
+			}
+			\only<3>{
+				\begin{block}{Inconvénients}
+					Travail hors connexion réseau
+				\end{block}
+			}
+			\only<4>{
+				\begin{exampleblock}{Exemples}
+					\begin{itemize}
+						\item CVS
+						\item SVN
+						\item \dots
+					\end{itemize}
+
+				
+				\end{exampleblock}
+			}
+			
+		\end{block}
+		\begin{block}<5->{Les gestionnaires décentralisés}
+			Plusieurs dépots de stockage			
+			\only<6>{
+				\begin{block}{Avantages}
+					\begin{itemize}
+						\item Pas de dépendances à une seule machine
+						\item Possibilité de travail hors connexion
+						\item Possibilité de participer le projet sans demander les permissions aux responsables du projet
+						\item Permet le travail en privé
+					\end{itemize}
+				\end{block}
+			}
+			\only<7>{
+				\begin{block}{Inconvénients}
+					\begin{itemize}
+						\item Clonnage de dépot plus long 
+						\item Pas de système de lock
+					\end{itemize}
+
+				\end{block}
+			}
+			
+			
+			\only<8>{
+				\begin{exampleblock}{Exemples}
+					\begin{itemize}
+						\item GNU Arch
+						\item Mercurial
+						\item Git
+					\end{itemize}
+					
+				\end{exampleblock}
+			}
+			
+		 
+		\end{block}
 	\end{frame}
 
 
