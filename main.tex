@@ -3,33 +3,35 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage{graphicx}
-\setbeamercovered{transparent}
+\usepackage{nameref}
+
 
 \title{Présentation Git \& Github}
 \author{Eliesse HADJEM}
 
 \usetheme[secheader]{Madrid}
+\useoutertheme{infolines}
+\setbeamercovered{transparent}
 
 
 \begin{document}
 
-  \begin{frame}
-    \maketitle
-  \end{frame}
-  
-  \begin{frame}
-    \tableofcontents
-  \end{frame}
+	\begin{frame}
+		\maketitle
+	\end{frame}
+
+	\begin{frame}
+		\tableofcontents
+	\end{frame}
+	
 \section{La gestion de version}
-  \input{./Src/VCS.tex}
-
-
+	\input{./Src/VCS.tex}
+	
 \section{Git}
-  \input{./Src/Git.tex}
+	\input{./Src/Git.tex}
 
 \section{Github}
-
-  \input{./Src/Github.tex}
+	\input{./Src/Github.tex}
 
 
 \end{document}
